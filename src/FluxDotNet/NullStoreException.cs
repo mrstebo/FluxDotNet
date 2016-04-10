@@ -2,9 +2,9 @@
 
 namespace FluxDotNet
 {
-    public class StoreNotRegisteredException : Exception
+    public class NullStoreException : Exception
     {
-        public StoreNotRegisteredException()
+        public NullStoreException()
             : base("Store has not been registered")
         {
         }

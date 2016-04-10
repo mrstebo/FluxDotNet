@@ -60,7 +60,7 @@ namespace FluxDotNet.Tests
         [Test]
         public void GetStoreWithUnregisteredStoreShouldThrowStoreNotRegisteredException()
         {
-            Assert.Throws<StoreNotRegisteredException>(() => _storeResolver.GetStore<TestStore>());
+            Assert.Throws<NullStoreException>(() => _storeResolver.GetStore<TestStore>());
         }
     }
 }

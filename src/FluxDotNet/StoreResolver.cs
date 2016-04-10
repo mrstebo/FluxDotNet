@@ -29,7 +29,7 @@ namespace FluxDotNet
             var key = typeof(T);
 
             if (!_stores.ContainsKey(key))
-                throw new StoreNotRegisteredException();
+                throw new NullStoreException();
 
             return (T)_stores[key];
         }
