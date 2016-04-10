@@ -55,7 +55,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="DispatcherTests.cs" />
+    <Compile Include="Mocks\TestAction.cs" />
+    <Compile Include="Mocks\TestStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
