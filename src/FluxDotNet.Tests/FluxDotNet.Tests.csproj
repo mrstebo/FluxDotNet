@@ -54,6 +54,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="DefaultStoreResolverTests.cs" />
     <Compile Include="DispatcherTests.cs" />
     <Compile Include="Mocks\TestAction.cs" />
     <Compile Include="Mocks\TestStore.cs" />
