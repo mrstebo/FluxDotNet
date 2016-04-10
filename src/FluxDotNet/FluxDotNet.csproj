@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ChangePayload.cs" />
     <Compile Include="Dispatcher.cs" />
+    <Compile Include="Flux.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Store.cs" />
     <Compile Include="StoreNotRegisteredException.cs" />
