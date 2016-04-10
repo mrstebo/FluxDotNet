@@ -14,7 +14,10 @@ namespace FluxDotNet.Tests
         public void SetUp()
         {
             _dispatcher = new Mock<IDispatcher>();
-            _store = new TestStore(_dispatcher.Object);
+
+            Flux.Dispatcher = _dispatcher.Object;
+
+            _store = new TestStore();
         }
 
         [TearDown]

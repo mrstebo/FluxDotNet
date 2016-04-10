@@ -11,8 +11,7 @@ namespace FluxDotNet.Tests
         [SetUp]
         public void SetUp()
         {
-            var dispatcher = Flux.Dispatcher;
-            var store = new TestStore(dispatcher);
+            var store = new TestStore();
 
             Flux.StoreResolver.Register(store);
 

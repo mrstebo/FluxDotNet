@@ -23,8 +23,7 @@ namespace FluxDotNet.Tests
         [Test]
         public void RegisterShouldNotThrowException()
         {
-            var dispatcher = new Dispatcher();
-            var store = new TestStore(dispatcher);
+            var store = new TestStore();
 
             Assert.DoesNotThrow(() => _storeResolver.Register(store));
         }
@@ -32,8 +31,7 @@ namespace FluxDotNet.Tests
         [Test]
         public void GetStoreShouldReturnRegisteredStore()
         {
-            var dispatcher = new Dispatcher();
-            var store = new TestStore(dispatcher);
+            var store = new TestStore();
 
             _storeResolver.Register(store);
 
@@ -45,9 +43,8 @@ namespace FluxDotNet.Tests
         [Test]
         public void GetStoreShouldReturnLastRegisteredStore()
         {
-            var dispatcher = new Dispatcher();
-            var store1 = new TestStore(dispatcher);
-            var store2 = new TestStore(dispatcher);
+            var store1 = new TestStore();
+            var store2 = new TestStore();
 
             _storeResolver.Register(store1);
             _storeResolver.Register(store2);

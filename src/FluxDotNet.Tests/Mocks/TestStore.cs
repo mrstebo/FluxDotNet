@@ -4,10 +4,9 @@
     {
         public string TestResult { get; private set; }
 
-        public TestStore(IDispatcher dispatcher) 
-            : base(dispatcher)
+        public TestStore()
         {
-            dispatcher.Register<TestAction>(OnTestAction);
+            Dispatcher.Register<TestAction>(OnTestAction);
         }
 
         private void OnTestAction(TestAction action)

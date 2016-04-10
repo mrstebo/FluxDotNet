@@ -9,9 +9,9 @@
     {
         public IDispatcher Dispatcher { get; private set; }
 
-        protected Store(IDispatcher dispatcher)
+        protected Store()
         {
-            Dispatcher = dispatcher;
+            Dispatcher = Flux.Dispatcher;
         }
 
         public void EmitChange()
