@@ -4,7 +4,7 @@ using NUnit.Framework;
 
 namespace FluxDotNet.Tests
 {
-    [TestFixture()]
+    [TestFixture]
     public class DispatcherTests
     {
         private IDispatcher _dispatcher;
