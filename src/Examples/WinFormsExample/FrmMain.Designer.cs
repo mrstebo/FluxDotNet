@@ -54,6 +54,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.OnAddClicked);
             // 
             // lstTodos
             // 
@@ -81,7 +82,7 @@
             this.colDescription.Text = "Description";
             this.colDescription.Width = 302;
             // 
-            // Form1
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,7 +90,7 @@
             this.Controls.Add(this.lstTodos);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtNewTodo);
-            this.Name = "Form1";
+            this.Name = "FrmMain";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
