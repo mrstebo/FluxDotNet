@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\ClearCompletedTodosAction.cs" />
     <Compile Include="Actions\CreateTodoAction.cs" />
     <Compile Include="Actions\GetActiveTodosAction.cs" />
     <Compile Include="Actions\GetAllTodosAction.cs" />

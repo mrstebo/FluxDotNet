@@ -10,11 +10,16 @@ namespace WinFormsExample.Stores
 {
     public class TodoStore : Store
     {
+        private static long _nextId = 1;
         private readonly IList<Todo> _todos = new List<Todo>();
-        private long _nextId = 1;
 
         public IEnumerable<Todo> Todos { get; private set; }
         public TodoFilters ActiveFilter { get; private set; }
+
+        public long TodosLeftToComplete
+        {
+            get { return _todos.Count(x => !x.IsComplete); }
+        }
 
         public TodoStore()
         {
@@ -23,6 +28,7 @@ namespace WinFormsExample.Stores
             Dispatcher.Register<GetCompletedTodosAction>(OnGetCompletedTodos);
             Dispatcher.Register<CreateTodoAction>(OnCreateTodo);
             Dispatcher.Register<UpdateTodoAction>(OnUpdateTodo);
+            Dispatcher.Register<ClearCompletedTodosAction>(OnClearCompletedTodos);
 
             Todos = new Todo[] {};
         }
@@ -72,6 +78,16 @@ namespace WinFormsExample.Stores
             {
                 todo.IsComplete = action.Completed;
             }
+
+            EmitChange();
+        }
+
+        private void OnClearCompletedTodos(ClearCompletedTodosAction action)
+        {
+            _todos
+                .Where(x => x.IsComplete)
+                .ToList()
+                .ForEach(x => _todos.Remove(x));
 
             EmitChange();
         }

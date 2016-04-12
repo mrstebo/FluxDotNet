@@ -156,7 +156,8 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtNewTodo);
             this.Name = "FrmMain";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Todo App";
             this.ResumeLayout(false);
             this.PerformLayout();
 
