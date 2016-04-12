@@ -23,13 +23,13 @@ namespace WinFormsExample
                         x.Description
                     })).ToArray());
             });
-        }
 
-        private void OnAddClicked(object sender, System.EventArgs e)
-        {
-            this.Dispatch(new CreateTodoAction {Description = txtNewTodo.Text});
+            btnAdd.Click += (x, y) =>
+            {
+                this.Dispatch(new CreateTodoAction {Description = txtNewTodo.Text});
 
-            txtNewTodo.Text = string.Empty;
+                txtNewTodo.Text = string.Empty;
+            };
         }
     }
 }
