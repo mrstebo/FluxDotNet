@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxDotNet", "FluxDotNet\Fl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxDotNet.Tests", "FluxDotNet.Tests\FluxDotNet.Tests.csproj", "{3C0F960F-5C8F-4981-BBA0-2322031E4B20}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{30317DA0-6C63-4502-AE89-B351946C3342}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsExample", "Examples\WinFormsExample\WinFormsExample.csproj", "{BBE8CC9C-BA63-4FBA-9D0C-B85C8681EE74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +25,15 @@ Global
 		{3C0F960F-5C8F-4981-BBA0-2322031E4B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C0F960F-5C8F-4981-BBA0-2322031E4B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C0F960F-5C8F-4981-BBA0-2322031E4B20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE8CC9C-BA63-4FBA-9D0C-B85C8681EE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE8CC9C-BA63-4FBA-9D0C-B85C8681EE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE8CC9C-BA63-4FBA-9D0C-B85C8681EE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE8CC9C-BA63-4FBA-9D0C-B85C8681EE74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBE8CC9C-BA63-4FBA-9D0C-B85C8681EE74} = {30317DA0-6C63-4502-AE89-B351946C3342}
 	EndGlobalSection
 EndGlobal
