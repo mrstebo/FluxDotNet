@@ -45,6 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\CreateTodoAction.cs" />
+    <Compile Include="Actions\GetActiveTodosAction.cs" />
+    <Compile Include="Actions\GetAllTodosAction.cs" />
+    <Compile Include="Actions\GetCompletedTodosAction.cs" />
+    <Compile Include="Actions\UpdateTodoAction.cs" />
+    <Compile Include="Enums\TodoFilters.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
