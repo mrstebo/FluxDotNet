@@ -1,14 +1,20 @@
 ﻿namespace FluxDotNet
 {
-    public static class Flux
+    public class Flux
     {
-        public static IDispatcher Dispatcher;
-        public static IStoreResolver StoreResolver;
+        private static IDispatcher _dispatcher;
+        private static IStoreResolver _storeResolver;
 
-        static Flux()
+        public static IDispatcher Dispatcher
         {
-            Dispatcher = new Dispatcher();
-            StoreResolver = new DefaultStoreResolver();
+            get { return _dispatcher ?? (_dispatcher = new Dispatcher()); }
+            set { _dispatcher = value; }
+        }
+
+        public static IStoreResolver StoreResolver
+        {
+            get { return _storeResolver ?? (_storeResolver = new DefaultStoreResolver()); }
+            set { _storeResolver = value; }
         }
     }
 }
