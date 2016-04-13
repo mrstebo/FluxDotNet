@@ -54,6 +54,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="AsyncDispatcherTests.cs" />
     <Compile Include="DefaultStoreResolverTests.cs" />
     <Compile Include="DispatcherTests.cs" />
     <Compile Include="FluxViewForExtensionsTests.cs" />
