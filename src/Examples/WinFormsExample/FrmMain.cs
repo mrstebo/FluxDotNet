@@ -16,6 +16,10 @@ namespace WinFormsExample
         {
             InitializeComponent();
 
+            // We have to declare this in the main form because we get the wrong synchronization context
+            // if we try and create this in Main.
+            // Alternatively you could create it in Main and then set the SynchronizationContext like this:
+            // ((IAsyncDispatcher) Flux.Dispatcher).SynchronizationContext = AsyncOperationManager.SynchronizationContext
             Flux.Dispatcher = new AsyncDispatcher();
             Flux.StoreResolver.Register(new TodoStore());
 
