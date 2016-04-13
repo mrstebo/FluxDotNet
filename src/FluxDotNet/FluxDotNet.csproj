@@ -34,6 +34,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsyncDispatcher.cs" />
     <Compile Include="ChangePayload.cs" />
     <Compile Include="Dispatcher.cs" />
     <Compile Include="NullDispatcherException.cs" />
