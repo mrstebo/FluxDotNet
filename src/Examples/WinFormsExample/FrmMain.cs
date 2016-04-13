@@ -16,6 +16,9 @@ namespace WinFormsExample
         {
             InitializeComponent();
 
+            Flux.Dispatcher = new AsyncDispatcher();
+            Flux.StoreResolver.Register(new TodoStore());
+
             this.OnChange(store =>
             {
                 _isUpdating = true;

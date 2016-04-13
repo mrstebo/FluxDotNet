@@ -11,7 +11,6 @@ namespace WinFormsExample
         [STAThread]
         static void Main()
         {
-            StoreRegistration.Register();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMain());
