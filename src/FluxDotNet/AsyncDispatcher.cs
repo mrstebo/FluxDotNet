@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace FluxDotNet
 {
-    public interface IAsyncDispatcher
+    public interface IAsyncDispatcher : IDispatcher
     {
         SynchronizationContext SynchronizationContext { get; set; }
     }
