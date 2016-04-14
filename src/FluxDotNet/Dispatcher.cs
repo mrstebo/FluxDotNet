@@ -26,15 +26,20 @@ namespace FluxDotNet
 
         public void Dispatch<T>(T payload)
         {
-            var key = typeof(T);
-
-            if (!_callbacks.ContainsKey(key))
-                return;
-
-            _callbacks[key]
-                .OfType<Action<T>>()
+            GetCallbacks<T>()
                 .ToList()
                 .ForEach(callback => callback(payload));
+        }
+
+        protected IEnumerable<Action<T>> GetCallbacks<T>()
+        {
+            var key = typeof (T);
+
+            if (!_callbacks.ContainsKey(key))
+                return Enumerable.Empty<Action<T>>();
+
+            return _callbacks[key]
+                .OfType<Action<T>>();
         }
     }
 }
